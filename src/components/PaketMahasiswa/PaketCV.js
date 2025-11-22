@@ -122,7 +122,8 @@ const PaketCV = () => {
         </div>
 
         <div className="portfolio-footer">
-          <Link to="/portofolio/cv" className="portfolio-link">
+          {/* ✔ Sudah dibetulkan rutenya */}
+          <Link to="/portofolio/mahasiswa/cv" className="portfolio-link">
             <b>Lihat Selengkapnya →</b>
           </Link>
         </div>

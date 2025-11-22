@@ -1,7 +1,16 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../../styles/PaketUMKM/PaketPoster.css";
-import posterImg from "../../assets/images/sumpahpemuda.png";
+
+// Import 6 gambar poster UMKM
+import poster1 from "../../assets/images/poster1.png";
+import poster2 from "../../assets/images/poster2.png";
+import poster3 from "../../assets/images/posterUMKM3.jpeg";
+import poster4 from "../../assets/images/posterUMKM4.jpeg";
+import poster5 from "../../assets/images/posterUMKM5.jpeg";
+import poster6 from "../../assets/images/poster1.png";
+
+const posterSamples = [poster1, poster2, poster3, poster4, poster5, poster6];
 
 const PaketPoster = () => {
   const navigate = useNavigate();
@@ -113,28 +122,27 @@ const PaketPoster = () => {
       </section>
 
       {/* ===============================
-           PORTOFOLIO
+           PORTOFOLIO UMKM
       =============================== */}
       <section className="poster-portfolio">
         <h2 className="poster-portfolio-title">Portofolio Poster</h2>
         <p className="poster-portfolio-subtitle">
-          Berikut contoh desain poster kreatif yang telah kami buat.
+          Berikut contoh desain poster kreatif UMKM yang telah kami buat.
         </p>
 
         <div className="poster-portfolio-grid">
-          {[...Array(6)].map((_, i) => (
+          {posterSamples.map((img, i) => (
             <div key={i} className="poster-portfolio-item">
-              <img src={posterImg} alt={`Poster ${i + 1}`} />
+              <img src={img} alt={`Poster UMKM ${i + 1}`} />
             </div>
           ))}
         </div>
 
         <div className="poster-portfolio-footer">
-  <Link to="/portofolio/umkm/poster" className="poster-portfolio-link">
-    <b>Lihat Selengkapnya →</b>
-  </Link>
-</div>
-
+          <Link to="/portofolio/umkm/poster" className="poster-portfolio-link">
+            <b>Lihat Selengkapnya →</b>
+          </Link>
+        </div>
       </section>
     </>
   );

@@ -10,10 +10,10 @@ import poster5 from "../../assets/images/posterMHS5.png";
 import poster6 from "../../assets/images/posterMHS6.png";
 import poster7 from "../../assets/images/posterMHS7.png";
 import poster8 from "../../assets/images/posterMHS8.png";
-import poster9 from "../../assets/images/poster.png";
-import poster10 from "../../assets/images/poster.png";
-import poster11 from "../../assets/images/poster.png";
-import poster12 from "../../assets/images/poster.png";
+import poster9 from "../../assets/images/posterMHS9.jpeg";
+import poster10 from "../../assets/images/posterMHS10.jpeg";
+import poster11 from "../../assets/images/posterMHS11.jpeg";
+import poster12 from "../../assets/images/posterMHS12.jpeg";
 
 const posters = [
   poster1, poster2, poster3,

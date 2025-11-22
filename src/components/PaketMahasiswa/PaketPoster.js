@@ -1,7 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/PaketUMKM/PaketPoster.css";
-import posterImg from "../../assets/images/sumpahpemuda.png";
+
+// Import gambar poster mahasiswa
+import poster1 from "../../assets/images/posterMHS1.png";
+import poster2 from "../../assets/images/posterMHS2.png";
+import poster3 from "../../assets/images/posterMHS3.png";
+import poster4 from "../../assets/images/posterMHS4.png";
+import poster5 from "../../assets/images/posterMHS5.png";
+import poster6 from "../../assets/images/posterMHS6.png";
+
+const posterSamples = [poster1, poster2, poster3, poster4, poster5, poster6];
 
 const PaketPoster = () => {
   const navigate = useNavigate();
@@ -17,9 +26,8 @@ const PaketPoster = () => {
     });
   };
 
-  // Navigate ke halaman AllPoster
   const handleLihatSelengkapnya = () => {
-    navigate("/portofolio/poster");
+    navigate("/portofolio/mahasiswa/poster");
   };
 
   const paketList = [
@@ -64,8 +72,8 @@ const PaketPoster = () => {
         "Konsultasi Prioritas",
         "Desain premium",
       ],
-      exclude: [],
       highlight: true,
+      exclude: [],
     },
   ];
 
@@ -123,19 +131,21 @@ const PaketPoster = () => {
         </p>
 
         <div className="poster-portfolio-grid">
-          {[...Array(6)].map((_, i) => (
+          {posterSamples.map((img, i) => (
             <div key={i} className="poster-portfolio-item">
-              <img src={posterImg} alt={`Poster ${i + 1}`} />
+              <img src={img} alt={`Poster ${i + 1}`} />
             </div>
           ))}
         </div>
 
         <div className="poster-portfolio-footer">
-  <button className="poster-portfolio-link" onClick={handleLihatSelengkapnya}>
-    <b>Lihat Selengkapnya →</b>
-  </button>
-</div>
-
+          <button
+            className="poster-portfolio-link"
+            onClick={handleLihatSelengkapnya}
+          >
+            <b>Lihat Selengkapnya →</b>
+          </button>
+        </div>
       </section>
     </>
   );

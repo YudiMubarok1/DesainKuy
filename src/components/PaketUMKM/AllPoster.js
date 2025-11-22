@@ -4,26 +4,16 @@ import "../../styles/PaketUMKM/AllPoster.css";
 // Import semua gambar poster UMKM
 import poster1 from "../../assets/images/poster1.png";
 import poster2 from "../../assets/images/poster2.png";
-import poster3 from "../../assets/images/poster1.png";
-import poster4 from "../../assets/images/poster1.png";
-import poster5 from "../../assets/images/poster1.png";
+import poster3 from "../../assets/images/posterUMKM3.jpeg";
+import poster4 from "../../assets/images/posterUMKM4.jpeg";
+import poster5 from "../../assets/images/posterUMKM5.jpeg";
 import poster6 from "../../assets/images/poster1.png";
-import poster7 from "../../assets/images/poster1.png";
-import poster8 from "../../assets/images/poster1.png";
-import poster9 from "../../assets/images/poster1.png";
-import poster10 from "../../assets/images/poster1.png";
-import poster11 from "../../assets/images/poster1.png";
-import poster12 from "../../assets/images/poster1.png";
-import poster13 from "../../assets/images/poster1.png";
-import poster14 from "../../assets/images/poster1.png";
-import poster15 from "../../assets/images/poster1.png";
+
 
 const posters = [
   poster1, poster2, poster3,
   poster4, poster5, poster6,
-  poster7, poster8, poster9,
-  poster10, poster11, poster12,
-  poster13, poster14, poster15,
+  
 ];
 
 const AllPosterUMKM = () => {

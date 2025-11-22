@@ -8,7 +8,7 @@ import banner3 from "../../assets/images/banner3.png";
 import banner4 from "../../assets/images/banner4.png";
 import banner5 from "../../assets/images/banner5.png";
 import banner6 from "../../assets/images/banner6.png";
-import banner7 from "../../assets/images/banner7.png";
+import banner7 from "../../assets/images/banner10.png";
 import banner8 from "../../assets/images/banner18.png";
 import banner9 from "../../assets/images/banner9.png";
 

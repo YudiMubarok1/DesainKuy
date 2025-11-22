@@ -1,8 +1,15 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import Footer from "../Footer";
+
 import "../../styles/PaketMahasiswa/PaketLogo.css";
-import logoImg from "../../assets/images/logo1.png";
+
+// Import 6 gambar portofolio dari folder Mahasiswa
+import logo1 from "../../assets/images/LogoMHS1.png";
+import logo2 from "../../assets/images/LogoMHS2.png";
+import logo3 from "../../assets/images/LogoMHS3.png";
+import logo4 from "../../assets/images/LogoMHS4.png";
+import logo5 from "../../assets/images/LogoMHS5.png";
+import logo6 from "../../assets/images/LogoMHS6.png";
 
 const PaketLogoMahasiswa = () => {
   const navigate = useNavigate();
@@ -25,11 +32,7 @@ const PaketLogoMahasiswa = () => {
       revisi: "1x Revisi",
       waktu: "1 Hari Kerja",
       price: "Rp 25.000",
-      fitur: [
-        "1 konsep logo",
-        "Format PNG",
-        "Warna basic",
-      ],
+      fitur: ["1 konsep logo", "Format PNG", "Warna basic"],
     },
     {
       title: "Logo Standar",
@@ -37,11 +40,7 @@ const PaketLogoMahasiswa = () => {
       revisi: "2x Revisi",
       waktu: "2 Hari Kerja",
       price: "Rp 40.000",
-      fitur: [
-        "2 konsep logo",
-        "Format PNG + HD",
-        "Mockup logo",
-      ],
+      fitur: ["2 konsep logo", "Format PNG + HD", "Mockup logo"],
     },
     {
       title: "Logo Premium",
@@ -58,6 +57,9 @@ const PaketLogoMahasiswa = () => {
       ],
     },
   ];
+
+  // 6 portofolio
+  const portfolioImages = [logo1, logo2, logo3, logo4, logo5, logo6];
 
   return (
     <>
@@ -107,21 +109,19 @@ const PaketLogoMahasiswa = () => {
         </p>
 
         <div className="mhs-portfolio-grid">
-          {[...Array(6)].map((_, i) => (
+          {portfolioImages.map((img, i) => (
             <div key={i} className="mhs-portfolio-item">
-              <img src={logoImg} alt={`Logo ${i + 1}`} />
+              <img src={img} alt={`Logo ${i + 1}`} />
             </div>
           ))}
         </div>
 
         <div className="mhs-portfolio-footer">
-          <Link to="/portofolio/logo" className="mhs-portfolio-link">
+          <Link to="/portofolio/mahasiswa/logo" className="mhs-portfolio-link">
             <b>Lihat Selengkapnya →</b>
           </Link>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };
