@@ -1,15 +1,7 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
-
-import "../../styles/PaketMahasiswa/PaketPoster.css";
-
-// Import 6 gambar poster untuk ditampilkan pada halaman utama paket
-import poster1 from "../../assets/images/posterMHS1.png";
-import poster2 from "../../assets/images/posterMHS2.png";
-import poster3 from "../../assets/images/posterMHS3.png";
-import poster4 from "../../assets/images/posterMHS4.png";
-import poster5 from "../../assets/images/posterMHS5.png";
-import poster6 from "../../assets/images/posterMHS6.png";
+import { useNavigate } from "react-router-dom";
+import "../../styles/PaketUMKM/PaketPoster.css";
+import posterImg from "../../assets/images/sumpahpemuda.png";
 
 const PaketPoster = () => {
   const navigate = useNavigate();
@@ -19,73 +11,100 @@ const PaketPoster = () => {
       state: {
         packageName: paketName,
         price,
-        category: "Mahasiswa",
-        type: "Desain Poster Mahasiswa",
+        category: "UMKM",
+        type: "Poster Design",
       },
     });
   };
 
+  // Navigate ke halaman AllPoster
+  const handleLihatSelengkapnya = () => {
+    navigate("/portofolio/poster");
+  };
+
   const paketList = [
     {
-      title: "Poster Basic",
-      desc: "Desain sederhana untuk tugas kuliah.",
-      size: "A4 / A3",
-      revisi: "1x Revisi",
-      waktu: "1 Hari Kerja",
-      price: "Rp 20.000",
-      fitur: ["Desain clean", "File siap cetak (PDF/JPG)", "Cocok untuk tugas individu"],
-    },
-    {
-      title: "Poster Standar",
-      desc: "Pilihan ideal untuk lomba atau kegiatan kampus.",
-      size: "A3 / A2",
+      title: "Poster Paket A",
+      desc: "Desain poster 1 pilihan dengan konsep visual sederhana & rapi.",
+      pilihan: "1 Desain",
       revisi: "2x Revisi",
-      waktu: "1-2 Hari Kerja",
-      price: "Rp 35.000",
-      fitur: ["Desain profesional", "Revisi fleksibel", "File cetak & digital"],
+      waktu: "1–2 Hari Kerja",
+      price: "Rp 45.000",
+      fitur: [
+        "Export JPG/PNG",
+        "Warna & tipografi disesuaikan",
+        "Cocok untuk promosi UMKM",
+      ],
+      exclude: ["File Master (AI/CDR) Tidak Termasuk"],
     },
     {
-      title: "Poster Premium",
-      desc: "Desain eksklusif untuk kompetisi nasional.",
-      size: "A2 / A1",
+      title: "Poster Paket B",
+      desc: "Desain poster 2 pilihan dengan kualitas yang lebih menarik.",
+      pilihan: "2 Desain",
       revisi: "3x Revisi",
-      waktu: "2-3 Hari Kerja",
-      price: "Rp 50.000",
-      fitur: ["Desain eksklusif", "Konsultasi via Chat", "Mockup preview"],
+      waktu: "1–2 Hari Kerja",
+      price: "Rp 75.000",
+      fitur: [
+        "Export JPG/PNG",
+        "File Master CDR/AI",
+        "Kustom warna & gaya visual",
+      ],
+      exclude: [],
+    },
+    {
+      title: "Poster Exclusive",
+      desc: "Desain premium + express.",
+      pilihan: "3 Desain",
+      revisi: "Revisi Unlimited (minor)",
+      waktu: "1 Hari Express",
+      price: "Rp 100.000",
+      fitur: [
+        "Export JPG/PNG",
+        "File Master CDR/AI",
+        "Konsultasi Prioritas",
+        "Desain premium",
+      ],
+      exclude: [],
+      highlight: true,
     },
   ];
 
-  // 6 poster untuk ditampilkan di bawah
-  const posterPreview = [poster1, poster2, poster3, poster4, poster5, poster6];
-
   return (
     <>
-      <section className="mhs-poster-section">
-        <h2 className="mhs-poster-title">🎓 Paket Desain Poster Mahasiswa</h2>
-        <p className="mhs-poster-subtitle">
-          Buat poster profesional untuk lomba, tugas, atau event kampus.
+      {/* SECTION POSTER */}
+      <section className="poster-section">
+        <h2 className="poster-title">🎨 Paket Desain Poster</h2>
+        <p className="poster-subtitle">
+          Tingkatkan daya tarik visual UMKM Anda dengan desain modern dan siap pakai.
         </p>
 
-        <div className="mhs-poster-cards">
+        <div className="poster-cards">
           {paketList.map((p, i) => (
-            <div key={i} className={`mhs-poster-card ${i === 2 ? "highlight" : ""}`}>
-              <div className="mhs-poster-header">{p.title}</div>
+            <div key={i} className={`poster-card ${p.highlight ? "highlight" : ""}`}>
+              <div className="poster-header">{p.title}</div>
 
-              <div className="mhs-poster-body">
-                <p className="mhs-poster-desc">{p.desc}</p>
-                <p className="mhs-poster-size">📏 {p.size}</p>
+              <div className="poster-body">
+                <p className="poster-desc">{p.desc}</p>
+                <p className="poster-pilihan">🖼️ {p.pilihan}</p>
 
-                <ul className="mhs-poster-fitur">
+                <ul className="poster-fitur">
                   {p.fitur.map((f, j) => (
                     <li key={j}>✅ {f}</li>
                   ))}
+
+                  {p.exclude.length > 0 &&
+                    p.exclude.map((e, j) => (
+                      <li key={j} className="poster-not-include">
+                        ❌ {e}
+                      </li>
+                    ))}
                 </ul>
 
-                <div className="mhs-poster-info">
+                <div className="poster-info">
                   <span>{p.revisi}</span> | <span>{p.waktu}</span>
                 </div>
 
-                <p className="mhs-poster-price">{p.price}</p>
+                <p className="poster-price">{p.price}</p>
 
                 <button onClick={() => handlePesan(p.title, p.price)}>
                   Pesan Sekarang
@@ -96,29 +115,28 @@ const PaketPoster = () => {
         </div>
       </section>
 
-      {/* 6 PORTFOLIO */}
-      <section className="mhs-poster-portfolio">
-        <h2 className="mhs-portfolio-title">Portofolio Poster</h2>
-        <p className="mhs-portfolio-subtitle">
-          Hasil desain poster terbaik untuk project dan kompetisi.
+      {/* PORTOFOLIO */}
+      <section className="poster-portfolio">
+        <h2 className="poster-portfolio-title">Portofolio Poster</h2>
+        <p className="poster-portfolio-subtitle">
+          Berikut contoh desain poster kreatif yang telah kami buat.
         </p>
 
-        <div className="mhs-portfolio-grid">
-          {posterPreview.map((img, i) => (
-            <div key={i} className="mhs-portfolio-item">
-              <img src={img} alt={`Poster ${i + 1}`} />
+        <div className="poster-portfolio-grid">
+          {[...Array(6)].map((_, i) => (
+            <div key={i} className="poster-portfolio-item">
+              <img src={posterImg} alt={`Poster ${i + 1}`} />
             </div>
           ))}
         </div>
 
-        <div className="mhs-portfolio-footer">
-          <Link to="/portofolio/poster" className="mhs-portfolio-link">
-            <b>Lihat Selengkapnya →</b>
-          </Link>
-        </div>
-      </section>
+        <div className="poster-portfolio-footer">
+  <button className="poster-portfolio-link" onClick={handleLihatSelengkapnya}>
+    <b>Lihat Selengkapnya →</b>
+  </button>
+</div>
 
-    
+      </section>
     </>
   );
 };

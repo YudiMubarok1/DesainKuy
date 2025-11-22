@@ -136,9 +136,10 @@ const PaketSertifikat = () => {
           ))}
         </div>
 
-        <Link to="/portofolio/sertifikat" className="portfolio-link">
-          <b>Lihat Selengkapnya →</b>
-        </Link>
+        <Link to="/portofolio/umkm/sertifikat" className="portfolio-link">
+  <b>Lihat Selengkapnya →</b>
+</Link>
+
       </section>
 
      

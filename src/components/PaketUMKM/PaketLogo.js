@@ -125,9 +125,10 @@ const PaketLogoUMKM = () => {
           ))}
         </div>
 
-        <Link to="/portofolio/logo-umkm" className="umkm-portfolio-link">
-          <b>Lihat Selengkapnya →</b>
-        </Link>
+        <Link to="/portofolio/umkm/logo" className="umkm-portfolio-link">
+  <b>Lihat Selengkapnya →</b>
+</Link>
+
       </section>
 
   

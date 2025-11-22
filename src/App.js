@@ -31,12 +31,17 @@ import PaketCV from "./components/PaketMahasiswa/PaketCV";
 import PaketPosterMahasiswa from "./components/PaketMahasiswa/PaketPoster";
 import PaketLogo from "./components/PaketMahasiswa/PaketLogo";
 
-// 🎨 Portofolio Lengkap
+// 🎨 Portofolio Lengkap — UMKM & MAHASISWA dipisah
 import Portofolio from "./components/Portofolio";
-import AllPoster from "./components/Portofolio/AllPoster";
+
+// UMKM
+import AllPosterUMKM from "./components/PaketUMKM/AllPoster";
 import AllLogoUMKM from "./components/Portofolio/AllLogoUMKM";
 import AllSertifikat from "./components/Portofolio/AllSertifikat";
 import AllBrosur from "./components/Portofolio/AllBrosur";
+
+// MAHASISWA
+import AllPosterMahasiswa from "./components/Portofolio/AllPoster";
 import AllBanner from "./components/Portofolio/AllBanner";
 import AllLogoMahasiswa from "./components/Portofolio/AllLogoMahasiswa";
 import AllCV from "./components/Portofolio/AllCV";
@@ -61,7 +66,9 @@ function AppContent() {
 
       <Routes>
 
-        {/* HOME */}
+        {/* ===============================
+                HOME
+        =============================== */}
         <Route
           path="/"
           element={
@@ -75,7 +82,9 @@ function AppContent() {
           }
         />
 
-        {/* UMKM */}
+        {/* ===============================
+                UMKM
+        =============================== */}
         <Route path="/layanan-umkm" element={<LayananUMKM />} />
         <Route path="/layanan-umkm/poster" element={<PaketPoster />} />
         <Route path="/layanan-umkm/logo" element={<PaketLogoUMKM />} />
@@ -83,7 +92,9 @@ function AppContent() {
         <Route path="/layanan-umkm/brosur" element={<PaketBrosur />} />
         <Route path="/layanan-umkm/feed-ig" element={<PaketFIG />} />
 
-        {/* MAHASISWA */}
+        {/* ===============================
+                MAHASISWA
+        =============================== */}
         <Route path="/layanan-mahasiswa" element={<LayananMahasiswa />} />
         <Route path="/layanan-mahasiswa/banner" element={<PaketBanner />} />
         <Route path="/layanan-mahasiswa/ppt" element={<PaketPPT />} />
@@ -91,34 +102,45 @@ function AppContent() {
         <Route path="/layanan-mahasiswa/poster" element={<PaketPosterMahasiswa />} />
         <Route path="/layanan-mahasiswa/logo" element={<PaketLogo />} />
 
-        {/* PORTOFOLIO */}
+        {/* ===============================
+                PORTOFOLIO
+        =============================== */}
         <Route path="/portofolio" element={<Portofolio />} />
 
         {/* UMKM */}
-        <Route path="/portofolio/umkm/poster" element={<AllPoster />} />
+        <Route path="/portofolio/umkm/poster" element={<AllPosterUMKM />} />
         <Route path="/portofolio/umkm/brosur" element={<AllBrosur />} />
         <Route path="/portofolio/umkm/logo" element={<AllLogoUMKM />} />
         <Route path="/portofolio/umkm/sertifikat" element={<AllSertifikat />} />
 
         {/* MAHASISWA */}
-        <Route path="/portofolio/mahasiswa/poster" element={<AllPoster />} />
+        <Route path="/portofolio/mahasiswa/poster" element={<AllPosterMahasiswa />} />
         <Route path="/portofolio/mahasiswa/banner" element={<AllBanner />} />
         <Route path="/portofolio/mahasiswa/logo" element={<AllLogoMahasiswa />} />
         <Route path="/portofolio/mahasiswa/cv" element={<AllCV />} />
 
-        {/* PESANAN */}
+        {/* ===============================
+                PESANAN
+        =============================== */}
         <Route path="/order-form" element={<OrderForm />} />
         <Route path="/orders" element={<OrdersPage />} />
 
-        {/* LOGIN */}
+        {/* ===============================
+                LOGIN
+        =============================== */}
         <Route path="/login" element={<LoginPage />} />
 
-        {/* ADMIN */}
+        {/* ===============================
+                ADMIN
+        =============================== */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/chat" element={<AdminDashboard />} />
 
-        {/* KONTAK */}
+        {/* ===============================
+                KONTAK
+        =============================== */}
         <Route path="/hubungi-kami" element={<Kontak />} />
+
       </Routes>
 
       {!isAdminPage && <Footer />}

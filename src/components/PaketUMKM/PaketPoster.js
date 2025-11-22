@@ -130,10 +130,11 @@ const PaketPoster = () => {
         </div>
 
         <div className="poster-portfolio-footer">
-          <Link to="/portofolio/poster" className="poster-portfolio-link">
-            <b>Lihat Selengkapnya →</b>
-          </Link>
-        </div>
+  <Link to="/portofolio/umkm/poster" className="poster-portfolio-link">
+    <b>Lihat Selengkapnya →</b>
+  </Link>
+</div>
+
       </section>
     </>
   );

@@ -18,7 +18,6 @@ function Header() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-
     return () => unsubscribe();
   }, []);
 
@@ -29,7 +28,11 @@ function Header() {
       return;
     }
 
-    const q = query(collection(db, "orders"), where("userEmail", "==", user.email));
+    const q = query(
+      collection(db, "orders"),
+      where("userEmail", "==", user.email)
+    );
+
     const unsubscribe = onSnapshot(q, (snapshot) => {
       const newDesigns = snapshot.docs
         .map((doc) => doc.data())
@@ -48,7 +51,6 @@ function Header() {
 
   return (
     <header className="navbar">
-      
       {/* === LOGO === */}
       <div className="navbar-logo">
         <Link to="/">
@@ -62,7 +64,6 @@ function Header() {
 
       {/* === NAVIGATION === */}
       <ul className="navbar-links">
-
         <li>
           <Link to="/" className={location.pathname === "/" ? "active" : ""}>
             Beranda
@@ -110,7 +111,6 @@ function Header() {
 
           {isDropdownVisible === "portofolio" && (
             <div className="dropdown-content">
-              
               <div className="dropdown-column">
                 <h4>UMKM</h4>
                 <Link to="/portofolio/umkm/poster">Poster UMKM</Link>
@@ -124,9 +124,10 @@ function Header() {
                 <Link to="/portofolio/mahasiswa/poster">Poster</Link>
                 <Link to="/portofolio/mahasiswa/banner">Banner</Link>
                 <Link to="/portofolio/mahasiswa/logo">Logo</Link>
+
+                {/* 🔥 Link CV diarahkan FIX ke AllCV */}
                 <Link to="/portofolio/mahasiswa/cv">Desain CV</Link>
               </div>
-
             </div>
           )}
         </li>
@@ -142,9 +143,14 @@ function Header() {
 
         {user && (
           <li className="nav-order">
-            <Link to="/orders" className={location.pathname === "/orders" ? "active" : ""}>
+            <Link
+              to="/orders"
+              className={location.pathname === "/orders" ? "active" : ""}
+            >
               Order
-              {newDesignCount > 0 && <span className="order-badge">{newDesignCount}</span>}
+              {newDesignCount > 0 && (
+                <span className="order-badge">{newDesignCount}</span>
+              )}
             </Link>
           </li>
         )}
@@ -173,7 +179,9 @@ function Header() {
             </button>
           </>
         ) : (
-          <Link to="/login" className="btn-login">Login</Link>
+          <Link to="/login" className="btn-login">
+            Login
+          </Link>
         )}
 
         <a

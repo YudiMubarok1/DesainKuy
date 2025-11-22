@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/PaketUMKM/AllPoster.css";
 
-// import gambar poster (ganti nanti sesuai file kamu)
+// Import gambar poster mahasiswa
 import poster1 from "../../assets/images/posterMHS1.png";
 import poster2 from "../../assets/images/posterMHS2.png";
 import poster3 from "../../assets/images/posterMHS3.png";
@@ -22,7 +22,7 @@ const posters = [
   poster10, poster11, poster12,
 ];
 
-const AllPoster = () => {
+const AllPosterMahasiswa = () => {
   return (
     <section className="allposter-container">
       <h2 className="allposter-title">Portofolio Poster Mahasiswa</h2>
@@ -32,7 +32,7 @@ const AllPoster = () => {
           <div key={index} className="allposter-item">
             <img
               src={img}
-              alt={`Poster ${index + 1}`}
+              alt={`Poster Mahasiswa ${index + 1}`}
               className="allposter-image"
             />
           </div>
@@ -42,4 +42,4 @@ const AllPoster = () => {
   );
 };
 
-export default AllPoster;
+export default AllPosterMahasiswa;

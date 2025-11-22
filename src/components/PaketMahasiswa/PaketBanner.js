@@ -2,7 +2,29 @@ import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Footer from "../Footer";
 import "../../styles/PaketMahasiswa/PaketBanner.css";
-import bannerImg from "../../assets/images/banner.png"; // ganti sesuai aset kamu
+
+// ================================
+// IMPORT GAMBAR PORTOFOLIO
+// ================================
+import banner1 from "../../assets/images/banner1.png";
+import banner2 from "../../assets/images/banner2.png";
+import banner3 from "../../assets/images/banner3.png";
+import banner4 from "../../assets/images/banner4.png";
+import banner5 from "../../assets/images/banner5.png";
+import banner6 from "../../assets/images/banner6.png";
+import banner7 from "../../assets/images/banner7.png";
+import banner8 from "../../assets/images/banner18.png";
+import banner9 from "../../assets/images/banner9.png";
+
+// 6 gambar untuk portofolio
+const portfolioImages = [
+  banner1,
+  banner2,
+  banner3,
+  banner4,
+  banner5,
+  banner6,
+];
 
 const PaketBanner = () => {
   const navigate = useNavigate();
@@ -55,6 +77,9 @@ const PaketBanner = () => {
 
   return (
     <>
+      {/* ========================= */}
+      {/* SECTION PAKET BANNER */}
+      {/* ========================= */}
       <section className="banner-section">
         <h2 className="banner-title">🎓 Paket Banner Mahasiswa</h2>
         <p className="banner-subtitle">
@@ -87,7 +112,9 @@ const PaketBanner = () => {
         </div>
       </section>
 
-      {/* 🎨 Portofolio Section */}
+      {/* ========================= */}
+      {/* SECTION PORTOFOLIO */}
+      {/* ========================= */}
       <section className="banner-portfolio">
         <h2 className="portfolio-title">Portofolio</h2>
         <p className="portfolio-subtitle">
@@ -95,17 +122,17 @@ const PaketBanner = () => {
         </p>
 
         <div className="portfolio-grid">
-          {[...Array(6)].map((_, i) => (
+          {portfolioImages.map((img, i) => (
             <div key={i} className="portfolio-item">
-              <img src={bannerImg} alt={`Banner ${i + 1}`} />
+              <img src={img} alt={`Banner ${i + 1}`} />
             </div>
           ))}
         </div>
 
         <div className="portfolio-footer">
-          <Link to="/portofolio/banner" className="portfolio-link">
-            <b>Lihat Selengkapnya →</b>
-          </Link>
+          <Link to="/portofolio/mahasiswa/banner" className="portfolio-link">
+  <b>Lihat Selengkapnya →</b>
+</Link>
         </div>
       </section>
 

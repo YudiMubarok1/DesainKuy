@@ -1,9 +1,9 @@
 import React from "react";
 import "../../styles/PaketUMKM/AllPoster.css";
 
-// Import semua gambar poster
+// Import semua gambar poster UMKM
 import poster1 from "../../assets/images/poster1.png";
-import poster2 from "../../assets/images/poster1.png";
+import poster2 from "../../assets/images/poster2.png";
 import poster3 from "../../assets/images/poster1.png";
 import poster4 from "../../assets/images/poster1.png";
 import poster5 from "../../assets/images/poster1.png";
@@ -18,7 +18,6 @@ import poster13 from "../../assets/images/poster1.png";
 import poster14 from "../../assets/images/poster1.png";
 import poster15 from "../../assets/images/poster1.png";
 
-// List gambar
 const posters = [
   poster1, poster2, poster3,
   poster4, poster5, poster6,
@@ -27,17 +26,17 @@ const posters = [
   poster13, poster14, poster15,
 ];
 
-const AllPoster = () => {
+const AllPosterUMKM = () => {
   return (
     <section className="allposter-container">
-      <h2 className="allposter-title">Portofolio Poster</h2>
+      <h2 className="allposter-title">Portofolio Poster UMKM</h2>
 
       <div className="allposter-grid">
         {posters.map((img, index) => (
           <div key={index} className="allposter-item">
             <img
               src={img}
-              alt={`Poster ${index + 1}`}
+              alt={`Poster UMKM ${index + 1}`}
               className="allposter-image"
             />
           </div>
@@ -47,4 +46,4 @@ const AllPoster = () => {
   );
 };
 
-export default AllPoster;
+export default AllPosterUMKM;
