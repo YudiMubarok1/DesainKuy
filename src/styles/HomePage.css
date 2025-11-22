@@ -1,0 +1,242 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.homepage {
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  scroll-behavior: smooth; /* 👈 efek scroll halus */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo img {
+  width: 100px;
+  height: 80px;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  font-weight: 700;
+}
+
+.navbar nav ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar nav ul li.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #ff8c00;
+  border-radius: 2px;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ff8c00;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.whatsapp img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 85px;
+  min-height: 100vh;
+}
+
+.hero-text .highlight {
+  color: #ff8c00;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: #ff8c00;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e57a00;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #ff8c00;
+  color: #ff8c00;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #ff8c00;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== FEATURES ===== */
+.features-inline {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.feature img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== HERO IMAGE ===== */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 650px;
+  background: linear-gradient(
+    45deg,
+    #ffffff 15%,
+    #1466ff 45%,
+    #ff7b00 85%
+  );
+  filter: blur(180px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.hero-image img {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ===== NEXT SECTION (scroll target) ===== */
+
+
+.next-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.next-section p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ff8c00;
+}

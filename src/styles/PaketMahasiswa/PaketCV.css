@@ -1,0 +1,224 @@
+/* === GLOBAL FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* === SECTION CV === */
+.cv-section {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 120px 20px;
+  background: #eaf4ff;
+}
+
+.cv-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 10px;
+}
+
+.cv-subtitle {
+  color: #444;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+/* === GRID FEED IG STYLE === */
+.cv-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === CARD === */
+.cv-card {
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid #007aff;
+  overflow: hidden;
+  min-height: 500px; /* FEED IG STYLE */
+  box-shadow: 0 4px 14px rgba(0, 98, 230, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease-in-out;
+}
+
+.cv-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 98, 230, 0.25);
+}
+
+/* HEADER */
+.cv-header {
+  background: #007aff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* BODY */
+.cv-body {
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* TEXT */
+.cv-desc {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.cv-fitur {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+.cv-fitur li {
+  margin-bottom: 7px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.cv-info {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+/* PRICE */
+.cv-price {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007aff;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.cv-body button {
+  background: #007aff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.25s;
+  width: 100%;
+}
+
+.cv-body button:hover {
+  background: #0056c9;
+  transform: scale(1.05);
+}
+
+/* === HIGHLIGHT PREMIUM (FEED IG BLUE STYLE) === */
+.cv-card.highlight {
+  background: linear-gradient(135deg, #0061d9, #66b3ff);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 88, 200, 0.35);
+}
+
+.cv-card.highlight .cv-header {
+  background: rgba(255, 255, 255, 0.27);
+}
+
+.cv-card.highlight .cv-price,
+.cv-card.highlight .cv-desc,
+.cv-card.highlight .cv-info,
+.cv-card.highlight .cv-fitur li {
+  color: #fff !important;
+}
+
+.cv-card.highlight button {
+  background: #fff;
+  color: #0056c9;
+}
+
+.cv-card.highlight button:hover {
+  background: #dbeaff;
+}
+
+/* === PORTFOLIO === */
+.cv-portfolio {
+  text-align: center;
+  background: #fff;
+  padding: 100px 20px;
+}
+
+.portfolio-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 12px;
+}
+
+.portfolio-subtitle {
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 88, 200, 0.2);
+  transition: 0.3s;
+}
+
+.portfolio-item img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 88, 200, 0.35);
+}
+
+.portfolio-link {
+  font-weight: 600;
+  color: #0056c9;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.portfolio-link:hover {
+  color: #003a91;
+  text-decoration: underline;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-item img {
+    max-width: 200px;
+  }
+}

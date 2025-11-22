@@ -1,0 +1,175 @@
+/* === GLOBAL FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ===============================
+   SECTION PPT – 100% IDENTIK CV
+=============================== */
+.ppt-section {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 120px 20px;
+  background: #eaf4ff;
+}
+
+.ppt-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 10px;
+}
+
+.ppt-subtitle {
+  color: #444;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+/* ===============================
+   GRID IDENTIK CV (Nempel banget!)
+=============================== */
+.ppt-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* SAMA PERSIS */
+  gap: 35px;
+  max-width: 1050px; /* SAMA PERSIS */
+  margin: 0 auto;
+}
+
+/* ===============================
+   CARD – IDENTIK CV
+=============================== */
+.ppt-card {
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid #007aff;
+  min-height: 520px;   /* FIX – EXACT LOOK */
+  box-shadow: 0 4px 14px rgba(0, 98, 230, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease-in-out;
+  overflow: hidden;
+}
+
+.ppt-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 98, 230, 0.25);
+}
+
+/* HEADER */
+.ppt-header {
+  background: #007aff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 22px;
+  text-align: center;
+}
+
+/* BODY */
+.ppt-body {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* TEXT */
+.ppt-desc {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* SLIDE INLINE */
+.ppt-slide {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 25px;
+}
+
+/* FITUR LIST */
+.ppt-fitur {
+  list-style: none;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: left;
+}
+
+.ppt-fitur li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* INFO */
+.ppt-info {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  
+}
+
+/* PRICE */
+.ppt-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  color: #007aff;
+  margin-top: auto;  /* tetap nempel bawah sebelum button */
+  margin-bottom: 22px;
+}
+
+/* BUTTON */
+.ppt-body button {
+  background: #007aff;
+  color: #fff;
+  padding: 15px 0;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+  width: 100%;
+}
+
+.ppt-body button:hover {
+  background: #0056c9;
+  transform: scale(1.05);
+}
+
+/* ===============================
+   PREMIUM HIGHLIGHT – EXACT COPY
+=============================== */
+.ppt-card.highlight {
+  background: linear-gradient(135deg, #0061d9, #66b3ff);
+  border: none;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 88, 200, 0.35);
+}
+
+.ppt-card.highlight .ppt-header {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.ppt-card.highlight .ppt-desc,
+.ppt-card.highlight .ppt-info,
+.ppt-card.highlight .ppt-fitur li,
+.ppt-card.highlight .ppt-slide,
+.ppt-card.highlight .ppt-price {
+  color: #fff !important;
+}
+
+.ppt-card.highlight button {
+  background: #fff;
+  color: #0056c9;
+}
+
+.ppt-card.highlight button:hover {
+  background: #dbeaff;
+}

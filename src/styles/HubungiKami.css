@@ -1,0 +1,114 @@
+/* Halaman utama */
+.hubungi-page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* ==== Testimoni ==== */
+.testimoni-section {
+  margin-bottom: 60px;
+}
+
+.testimoni-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.testimoni-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+.testimoni-card {
+  flex: 0 0 250px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.testimoni-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-icon {
+  font-size: 40px;
+  margin-right: 10px;
+}
+.user-icon.blue { color: #3498db; }
+.user-icon.red { color: #e74c3c; }
+.user-icon.orange { color: #e67e22; }
+
+.tgl {
+  font-size: 12px;
+  color: #888;
+}
+
+.stars {
+  margin-top: 10px;
+  color: #f4c150;
+}
+
+.slider-btn {
+  background: #f4a300;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-btn:hover {
+  background: #e69500;
+}
+
+/* ==== Hubungi Kami ==== */
+.hubungi-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.hubungi-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.hubungi-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4a300;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.hubungi-btn:hover {
+  background: #e69500;
+  transform: translateY(-2px);
+}
+
+.wa-icon {
+  font-size: 20px;
+}

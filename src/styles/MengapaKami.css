@@ -1,0 +1,78 @@
+.mengapa-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.mengapa-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #111;
+}
+
+.mengapa-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mengapa-card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 35px 30px 30px;
+  width: 380px;              /* dilebarkan agar teks muat */
+  min-height: 190px;         /* tinggi otomatis menyesuaikan isi */
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Lingkaran angka */
+.mengapa-number {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f7931e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.mengapa-card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.mengapa-card p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 95%;           /* agak lega ke samping */
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .mengapa-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mengapa-card {
+    width: 100%;
+    max-width: 500px;       /* di layar kecil tetap lega */
+  }
+}

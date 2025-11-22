@@ -1,0 +1,115 @@
+.order-detail-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.order-detail-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.8rem;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.order-detail-box h2 {
+  margin-bottom: 1rem;
+  color: #1f2937;
+  text-align: center;
+}
+
+.desc-box {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.preview-section {
+  margin: 1rem 0;
+}
+
+.design-preview {
+  width: 100%;
+  height: 280px;
+  border: none;
+  border-radius: 10px;
+}
+
+.revision-section {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.btn-revisi {
+  background: #facc15;
+  color: #111;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-revisi:hover {
+  background: #fbbf24;
+}
+
+.revision-form {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.revision-form textarea {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 10px;
+  font-size: 0.95rem;
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+
+.btn-submit {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-submit:hover {
+  background: #1d4ed8;
+}
+
+.btn-close {
+  background: #e5e7eb;
+  border: none;
+  color: #111;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-top: 1.2rem;
+  display: block;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.btn-close:hover {
+  background: #d1d5db;
+}

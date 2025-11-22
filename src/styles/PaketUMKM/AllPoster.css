@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.allposter-container {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 130px 20px;
+  background: #fff;
+}
+
+.allposter-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+/* Grid layout 3 kolom di desktop */
+.allposter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Tiap item */
+.allposter-item {
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.allposter-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.allposter-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif tablet */
+@media (max-width: 992px) {
+  .allposter-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Responsif mobile */
+@media (max-width: 600px) {
+  .allposter-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .allposter-title {
+    font-size: 1.4rem;
+  }
+}

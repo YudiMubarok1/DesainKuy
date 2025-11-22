@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.kontak-page {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ===== HERO ===== */
+.kontak-hero {
+  text-align: center;
+  padding: 120px 20px 60px;
+  background: linear-gradient(135deg, #fff 20%, #ff8c00 120%);
+  backdrop-filter: blur(8px);
+  color: #1f1f1f;
+}
+
+.kontak-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.kontak-hero p {
+  font-size: 18px;
+  color: #333;
+}
+
+.kontak-hero span {
+  color: #ff8c00;
+  font-weight: 700;
+}
+
+/* ===== KONTAK CONTAINER ===== */
+.kontak-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  padding: 60px 80px;
+}
+
+/* ===== FORM KONTAK ===== */
+.kontak-form {
+  flex: 1;
+  min-width: 350px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.kontak-form h2 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ff8c00;
+}
+
+.kontak-form input,
+.kontak-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.kontak-form input:focus,
+.kontak-form textarea:focus {
+  border-color: #ff8c00;
+  box-shadow: 0 0 6px rgba(255, 140, 0, 0.4);
+}
+
+.btn-primary {
+  background: #ff8c00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+}
+
+.btn-primary:hover {
+  background: #e57800;
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.4);
+}
+
+/* ===== INFO KONTAK ===== */
+.kontak-info {
+  flex: 1;
+  min-width: 350px;
+}
+
+.kontak-info h2 {
+  font-weight: 700;
+  color: #ff8c00;
+  margin-bottom: 20px;
+}
+
+.kontak-info p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.kontak-map {
+  margin-top: 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #fff7f0;
+  color: #333;
+  padding: 60px 80px 30px;
+  border-top: 2px solid rgba(255, 140, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer-brand span.glow {
+  color: #ff8c00;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+}

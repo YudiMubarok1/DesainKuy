@@ -1,0 +1,113 @@
+.home-banner {
+  background: #fffaf3;
+  padding: 80px 100px;
+}
+
+.home-banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Kiri */
+.home-banner-content {
+  flex: 1;
+}
+
+.home-banner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.home-banner-desc {
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Tombol */
+.home-banner-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: #f9a825;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #e69100;
+}
+
+.btn-outline {
+  border: 2px solid #f9a825;
+  color: #f9a825;
+  background: #fff;
+}
+
+.btn-outline:hover {
+  background: #f9a825;
+  color: #fff;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  margin-left: 8px;
+}
+
+/* Kanan */
+.home-banner-image {
+  flex: 1;
+  text-align: right;
+}
+
+.home-banner-image img {
+  max-width: 400px;
+  width: 100%;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animasi lembut */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .home-banner-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .home-banner-image img {
+    max-width: 300px;
+  }
+
+  .home-banner-buttons {
+    justify-content: center;
+  }
+}

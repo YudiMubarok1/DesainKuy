@@ -1,0 +1,131 @@
+/* ============================
+   CONTAINER & TITLE
+=============================== */
+.umkm-container {
+  text-align: center;
+  padding: 135px 20px;
+  background: #fff;
+}
+
+.umkm-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.umkm-subtitle {
+  font-size: 1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+/* ============================
+   GRID LAYOUT (selalu rapi)
+=============================== */
+.umkm-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ============================
+   CARD (fix tinggi)
+=============================== */
+.umkm-card {
+  width: 100%;
+  max-width: 330px;
+  height: 350px;              /* ⭐ FIXTINGGI BIAR SAMA SEMUA */
+  background: #fff;
+  border: 2px solid #f4b400;
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* ⭐ Ratakan atas-bawah */
+  align-items: center;
+
+  transition: 0.3s ease;
+}
+
+.umkm-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================
+   JUDUL
+=============================== */
+.umkm-card h3 {
+  background: #f4b400;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* ============================
+   GAMBAR (seragam FIX)
+=============================== */
+.umkm-img {
+  width: 2000px;
+  height: 150px;          /* ⭐ FIXTINGGI AGAR SAMA */
+  object-fit: contain;    /* gambar tidak gepeng / pecah */
+  margin: 15px 0;
+}
+
+/* ============================
+   LINK
+=============================== */
+.umkm-link {
+  color: #f4b400;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: px;
+}
+
+.umkm-link:hover {
+  color: #d89b00;
+}
+
+/* ============================
+   POSISI KARTU BARIS 2
+=============================== */
+.umkm-card:nth-child(4) {
+  grid-column: 1;
+}
+
+.umkm-card:nth-child(5) {
+  grid-column: 2;
+}
+
+/* ============================
+   RESPONSIVE FIX
+=============================== */
+@media (max-width: 900px) {
+  .umkm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .umkm-card {
+    height: 360px;   /* lebih tinggi dikit utk HP */
+  }
+}
+
+@media (max-width: 600px) {
+  .umkm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .umkm-card {
+    height: auto;    /* di HP bebas tinggi */
+  }
+}

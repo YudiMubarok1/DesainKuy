@@ -1,0 +1,218 @@
+/* === GLOBAL FONT === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* === SECTION MAHASISWA === */
+.banner-section {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 120px 20px;
+  background: #eaf4ff;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 10px;
+}
+
+.banner-subtitle {
+  color: #444;
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+/* === GRID FEED IG STYLE === */
+.banner-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 35px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === CARD === */
+.banner-card {
+  background: #fff;
+  border-radius: 18px;
+  border: 2px solid #007aff;
+  overflow: hidden;
+  min-height: 500px; /* SAMA PERSIS FEED IG */
+  box-shadow: 0 4px 14px rgba(0, 98, 230, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: 0.25s ease-in-out;
+}
+
+.banner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 98, 230, 0.25);
+}
+
+/* HEADER */
+.banner-header {
+  background: #007aff;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* BODY */
+.banner-body {
+  padding: 28px 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* TEXT */
+.banner-desc {
+  color: #333;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.banner-size {
+  color: #0056c9;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 14px;
+}
+
+/* FITUR */
+.banner-fitur {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: left;
+}
+
+.banner-fitur li {
+  margin-bottom: 7px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* INFO */
+.banner-info {
+  font-size: 0.9rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 14px;
+}
+
+/* PRICE */
+.banner-price {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007aff;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.banner-body button {
+  background: #007aff;
+  color: #fff;
+  border-radius: 30px;
+  padding: 14px 0;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.25s;
+  width: 100%;
+}
+
+.banner-body button:hover {
+  background: #0056c9;
+  transform: scale(1.05);
+}
+
+/* === HIGHLIGHT PREMIUM (FEED IG STYLE) === */
+.banner-card.highlight {
+  background: linear-gradient(135deg, #0061d9, #66b3ff);
+  border: none;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 88, 200, 0.35);
+}
+
+.banner-card.highlight .banner-header {
+  background: rgba(255, 255, 255, 0.27);
+}
+
+.banner-card.highlight .banner-price,
+.banner-card.highlight .banner-desc,
+.banner-card.highlight .banner-size,
+.banner-card.highlight .banner-info,
+.banner-card.highlight .banner-fitur li {
+  color: #fff !important;
+}
+
+.banner-card.highlight button {
+  background: #fff;
+  color: #0056c9;
+}
+
+.banner-card.highlight button:hover {
+  background: #dbeaff;
+}
+
+/* === PORTFOLIO === */
+.banner-portfolio {
+  text-align: center;
+  background: #fff;
+  padding: 100px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.portfolio-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0056c9;
+  margin-bottom: 12px;
+}
+
+.portfolio-subtitle {
+  color: #444;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 88, 200, 0.2);
+  transition: 0.3s;
+}
+
+.portfolio-item img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 88, 200, 0.35);
+}
+
+.portfolio-link {
+  font-weight: 600;
+  color: #0056c9;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.portfolio-link:hover {
+  color: #003a91;
+  text-decoration: underline;
+}

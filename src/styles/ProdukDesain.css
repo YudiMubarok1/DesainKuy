@@ -1,0 +1,126 @@
+.produk-container {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.produk-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.produk-subtitle {
+  font-size: 16px;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 50px;
+}
+
+.produk-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Bagian gambar */
+.produk-image-wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.produk-image {
+  width: 360px;
+  height: auto;
+}
+
+/* Card teks */
+.produk-card {
+  flex: 1;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.produk-card h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.produk-card p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+
+.produk-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff6600;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.produk-link:hover {
+  text-decoration: underline;
+}
+
+/* Overlay untuk Mahasiswa */
+/* Overlay untuk Mahasiswa */
+.overlay-card {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-60%, -40%); /* naikin 20% */
+  width: 85%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: left;
+}
+
+.overlay-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.overlay-card p {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+  .produk-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .produk-card {
+    text-align: center;
+  }
+
+  .overlay-card {
+    position: relative;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    margin-top: 20px;
+    width: 100%;
+  }
+}
